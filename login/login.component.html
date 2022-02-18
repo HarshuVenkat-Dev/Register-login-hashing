@@ -1,0 +1,58 @@
+<!-- <div class="card">
+  <div class="card-body">  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-3"> 
+      <button type="submit" class="btn btn-primary">Login</button></div>
+      <div class="col-md-3"> 
+        <button type="submit" (click)="signInHandler()" class="btn btn-primary"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Login with Google</button></div>
+      <!-- <div class="col-md-3"> <a class="btn btn-sm btn-google btn-block text-uppercase btn-outline" href="#"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Signup Using Google</a> </div> -->
+  <!-- </div>
+  </form>
+</div>
+</div> [formGroup]="LoginForm" (ngSubmit)="onFormSubmit()"--> 
+
+
+
+<div class="sidenav">
+  <div class="login-main-text">
+     <h2>Application<br> Login Page</h2>
+     <p>Login from here to access.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+      
+     <div class="login-form">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
+           <div class="form-group">
+              <label>Email Id</label>
+              <input type="text" class="form-control" id="emailId" formControlName="emailId" name="emailId" placeholder="Email Name">
+             
+          </div>
+           <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control"  id="password" formControlName="password" name="password" placeholder="Password">
+              <!-- <div *ngIf="invalidCredentialMsg">{{invalidCredentialMsg}}</div> -->
+          </div>
+           <button type="submit" class="btn btn-black mr-2">Login</button>
+           <button type="submit" (click)="signInHandler()" class="btn btn-black mr-2"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Login with Google</button>
+           <button type="submit"  class="btn btn-black mr-2" routerLink="/register">New User</button>
+           <!-- <a href="/register" class="badge badge-info">If not registered Click here</a> -->
+        </form>
+     </div>
+  </div>
+</div>
